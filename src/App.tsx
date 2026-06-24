@@ -48,9 +48,9 @@ export default function App() {
       </div>
 
       <div className="demo-grid">
-        <BaselineDemo onLog={log} />
+        {/* <BaselineDemo onLog={log} />
         <ShadowPortalDemo onLog={log} />
-        <SurfaceConflictDemo onLog={log} />
+        <SurfaceConflictDemo onLog={log} /> */}
         <PluginHostMenuDemo onLog={log} />
       </div>
 

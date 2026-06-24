@@ -191,21 +191,8 @@ export function PluginHostMenuDemo({ onLog }: { onLog: LogFn }) {
                   className="menu-content xr-outer-content plugin-host-surface"
                   enable-xr={true}
                   data-name="plugin-host-surface"
+                  style={{ "--xr-back": 60 }}
                 >
-                  <div className="content-badge">
-                    Visible Content / plugin host
-                  </div>
-                  <div
-                    className="content-hint"
-                    data-name="plugin-host-surface-note"
-                  >
-                    Content asChild + enable-xr surface，shadow root 插件项通过
-                    WebSpatial overlay 注入到这个空间菜单层。
-                  </div>
-                  <div className="surface-hint">
-                    不再手动切换 outer / inner target，直接对齐 Scenario 4 的
-                    plugin host overlay 结构。
-                  </div>
                   <OverlayTarget />
                 </div>
               </DropdownMenu.Content>

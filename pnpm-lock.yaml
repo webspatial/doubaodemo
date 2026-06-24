@@ -12,11 +12,11 @@ importers:
         specifier: ^2.1.2
         version: 2.1.16(@types/react-dom@18.3.7(@types/react@18.3.29))(@types/react@18.3.29)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@webspatial/core-sdk':
-        specifier: https://pkg.pr.new/@webspatial/core-sdk@16122cc
-        version: https://pkg.pr.new/@webspatial/core-sdk@16122cc
+        specifier: https://pkg.pr.new/@webspatial/core-sdk@41f791e
+        version: https://pkg.pr.new/@webspatial/core-sdk@41f791e
       '@webspatial/react-sdk':
-        specifier: https://pkg.pr.new/@webspatial/react-sdk@16122cc
-        version: https://pkg.pr.new/@webspatial/react-sdk@16122cc(@webspatial/core-sdk@https://pkg.pr.new/@webspatial/core-sdk@16122cc)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: https://pkg.pr.new/@webspatial/react-sdk@41f791e
+        version: https://pkg.pr.new/@webspatial/react-sdk@41f791e(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -733,22 +733,20 @@ packages:
     peerDependencies:
       vite: ^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
 
-  '@webspatial/core-sdk@https://pkg.pr.new/@webspatial/core-sdk@16122cc':
-    resolution: {tarball: https://pkg.pr.new/@webspatial/core-sdk@16122cc}
+  '@webspatial/core-sdk@https://pkg.pr.new/@webspatial/core-sdk@41f791e':
+    resolution: {tarball: https://pkg.pr.new/@webspatial/core-sdk@41f791e}
     version: 1.7.0
 
-  '@webspatial/react-sdk@https://pkg.pr.new/@webspatial/react-sdk@16122cc':
-    resolution: {tarball: https://pkg.pr.new/@webspatial/react-sdk@16122cc}
+  '@webspatial/core-sdk@https://pkg.pr.new/webspatial/webspatial-sdk/@webspatial/core-sdk@41f791e':
+    resolution: {tarball: https://pkg.pr.new/webspatial/webspatial-sdk/@webspatial/core-sdk@41f791e}
+    version: 1.7.0
+
+  '@webspatial/react-sdk@https://pkg.pr.new/@webspatial/react-sdk@41f791e':
+    resolution: {tarball: https://pkg.pr.new/@webspatial/react-sdk@41f791e}
     version: 1.7.0
     peerDependencies:
-      '@webspatial/core-sdk': ^1.5.0
-      react: '>=18.0.0'
-      react-dom: '>=18.0.0'
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
+      react: '>=18.0'
+      react-dom: '>=18.0'
 
   aria-hidden@1.2.6:
     resolution: {integrity: sha512-ik3ZgC9dY/lYVVM++OISsaYDeg1tb0VtP5uL3ouh1koGOaUMDPpbFIei4JkFimWUFPn90sbMNMXQAIVOlnYKJA==}
@@ -1558,12 +1556,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@webspatial/core-sdk@https://pkg.pr.new/@webspatial/core-sdk@16122cc': {}
+  '@webspatial/core-sdk@https://pkg.pr.new/@webspatial/core-sdk@41f791e': {}
 
-  '@webspatial/react-sdk@https://pkg.pr.new/@webspatial/react-sdk@16122cc(@webspatial/core-sdk@https://pkg.pr.new/@webspatial/core-sdk@16122cc)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@webspatial/core-sdk@https://pkg.pr.new/webspatial/webspatial-sdk/@webspatial/core-sdk@41f791e': {}
+
+  '@webspatial/react-sdk@https://pkg.pr.new/@webspatial/react-sdk@41f791e(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@webspatial/core-sdk': https://pkg.pr.new/@webspatial/core-sdk@16122cc
-    optionalDependencies:
+      '@webspatial/core-sdk': https://pkg.pr.new/webspatial/webspatial-sdk/@webspatial/core-sdk@41f791e
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 

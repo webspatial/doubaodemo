@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.2",
-    "@webspatial/core-sdk": "https://pkg.pr.new/@webspatial/core-sdk@16122cc",
-    "@webspatial/react-sdk": "https://pkg.pr.new/@webspatial/react-sdk@16122cc",
+    "@webspatial/core-sdk": "https://pkg.pr.new/@webspatial/core-sdk@41f791e",
+    "@webspatial/react-sdk": "https://pkg.pr.new/@webspatial/react-sdk@41f791e",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
