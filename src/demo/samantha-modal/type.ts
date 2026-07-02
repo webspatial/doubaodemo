@@ -6,12 +6,20 @@ import type { ModalReactProps } from '@douyinfe/semi-ui/lib/es/modal/Modal';
 // import { ButtonProps } from '../samantha-button';
 type ButtonProps = Record<string, unknown>;
 
+export type SamanthaModalSpatialCardOptions =
+  | false
+  | {
+      back?: number | string;
+      backgroundMaterial?: string;
+    };
+
 export type SamanthaModalProps = Omit<
   ModalReactProps,
   'okButtonProps' | 'cancelButtonProps'
 > & {
   // size?: 'small' | 'medium' | 'large' | 'x-large' | 'full-width';
   desc?: string;
+  spatialCard?: SamanthaModalSpatialCardOptions;
   okButtonProps?: ButtonProps;
   cancelButtonProps?: ButtonProps;
 };

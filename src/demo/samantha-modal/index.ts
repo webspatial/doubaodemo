@@ -17,23 +17,23 @@ import {
 const SamanthaModal = Modal as SamanthaModalComponent;
 
 SamanthaModal.info = function (props: SamanthaModalProps) {
-  return confirm<ReturnType<typeof withInfo>>(withInfo(props));
+  return confirm(withInfo(props));
 };
 
 SamanthaModal.success = function (props: SamanthaModalProps) {
-  return confirm<ReturnType<typeof withSuccess>>(withSuccess(props));
+  return confirm(withSuccess(props));
 };
 
 SamanthaModal.warning = function (props: SamanthaModalProps) {
-  return confirm<ReturnType<typeof withWarning>>(withWarning(props));
+  return confirm(withWarning(props));
 };
 
 SamanthaModal.error = function (props: SamanthaModalProps) {
-  return confirm<ReturnType<typeof withError>>(withError(props));
+  return confirm(withError(props));
 };
 
 SamanthaModal.confirm = function (props: SamanthaModalProps) {
-  return confirm<ReturnType<typeof withConfirm>>(withConfirm(props));
+  return confirm(withConfirm(props));
 };
 
 SamanthaModal.destroyAll = function destroyAllFn() {

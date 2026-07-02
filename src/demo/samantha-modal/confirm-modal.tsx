@@ -10,10 +10,9 @@ import { picoConfirmModalOverride } from './pico-confirm-modal';
 import { SamanthaModal } from './modal';
 
 export const ConfirmModal = (props: ConfirmProps) => {
-  const [visible, setVisible] = useState<boolean>(true);
-  const { direction } = props;
-
-  const { title, content, icon, onCancel, onOk, className, ...rest } = props;
+  const [visible, setVisible] = useState(true);
+  const { direction, title, content, icon, onCancel, onOk, className, ...rest } =
+    props;
   const { loading: confirmLoading, handler: handleOk } = useLoading({
     onTrigger: onOk,
     onFinish: () => setVisible(false),

@@ -17,14 +17,14 @@ export default function App() {
 
   return (
     <div className="page app-shell">
-      <header className="hero">
+      {/* <header className="hero">
         <h1 className="title">WebSpatial Dropdown Menu — 多场景对照 Demo</h1>
         <p className="subtitle">
           四个场景逐步展示 WebSpatial 与 Radix Dropdown Menu 的集成方式：
           主页面浮动菜单 (Scenario 1)、双 Root + SpatialOverlay (Scenario 4)、
           父 SpatialDiv 内双 Root (Scenario 5)，以及插件宿主场景。
         </p>
-      </header>
+      </header> */}
 
       {/* <div className="summary">
         <div className="summary-item">
@@ -50,8 +50,8 @@ export default function App() {
       </div> */}
 
       <div className="demo-grid">
-        <BaselineDemo onLog={log} />
-        <AboutModalFlowDemo onLog={log} />
+        {/* <BaselineDemo onLog={log} /> */}
+        {/* <AboutModalFlowDemo onLog={log} /> */}
         <SamanthaModalDemo onLog={log} />
         {/* <ShadowPortalDemo onLog={log} /> */}
         {/* <SurfaceConflictDemo onLog={log} /> */}

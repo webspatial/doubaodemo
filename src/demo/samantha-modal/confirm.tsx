@@ -1,12 +1,5 @@
 import ReactDOM from 'react-dom';
 
-// TODO(PORTING): 移植时替换为内部图标
-// import {
-//   IconInfoFillIcon,
-//   IconSuccessSmallIcon,
-//   IconWarningSmallIcon,
-//   IconErrorSmallIcon,
-// } from '@flow-web/l1-arch-base-samantha-icons';
 import IconInfoCircle from '@douyinfe/semi-icons/lib/es/icons/IconInfoCircle';
 import IconTickCircle from '@douyinfe/semi-icons/lib/es/icons/IconTickCircle';
 import IconAlertCircle from '@douyinfe/semi-icons/lib/es/icons/IconAlertCircle';
@@ -84,10 +77,6 @@ export function confirm<T>(props: ConfirmProps) {
 export function withInfo(props: SamanthaModalProps): ConfirmProps {
   return {
     type: 'info' as const,
-    // TODO(PORTING): 移植时恢复原始图标
-    // icon: (
-    //   <IconInfoFillIcon className="py-2 !text-20 text-s-color-system-info" />
-    // ),
     icon: <IconInfoCircle className="py-2 text-20 text-s-color-system-info" />,
     ...props,
   };
@@ -96,10 +85,6 @@ export function withInfo(props: SamanthaModalProps): ConfirmProps {
 export function withConfirm(props: SamanthaModalProps): ConfirmProps {
   return {
     type: 'confirm' as const,
-    // TODO(PORTING): 移植时恢复原始图标
-    // icon: (
-    //   <IconInfoFillIcon className="py-2 !text-20 text-s-color-system-info" />
-    // ),
     icon: <IconInfoCircle className="py-2 text-20 text-s-color-system-info" />,
     ...props,
   };
@@ -108,12 +93,6 @@ export function withConfirm(props: SamanthaModalProps): ConfirmProps {
 export function withSuccess(props: SamanthaModalProps): ConfirmProps {
   return {
     type: 'success' as const,
-    // TODO(PORTING): 移植时恢复原始图标
-    // icon: (
-    //   <IconSuccessSmallIcon
-    //     className={`py-2 !text-20 text-s-color-system-success`}
-    //   />
-    // ),
     icon: <IconTickCircle className="py-2 text-20 text-s-color-system-success" />,
     ...props,
   };
@@ -123,22 +102,12 @@ export function withWarning(props: SamanthaModalProps): ConfirmProps {
   const { okButtonProps = {}, ...rest } = props;
   return {
     type: 'warning' as const,
-    // TODO(PORTING): 移植时恢复原始图标和 pico-warning-icon 包装
-    // icon: (
-    //   <div className="pico-warning-icon">
-    //     <IconWarningSmallIcon
-    //       className={`py-2 !text-20 text-s-color-system-warning`}
-    //     />
-    //   </div>
-    // ),
     icon: (
       <div className="pico-warning-icon">
         <IconAlertCircle className="py-2 text-20 text-s-color-system-warning" />
       </div>
     ),
     okButtonProps: {
-      // TODO(PORTING): 移植时恢复 danger-primary 类型
-      // type: 'danger-primary',
       type: 'danger' as const,
       ...okButtonProps,
     },
@@ -150,14 +119,8 @@ export function withError(props: SamanthaModalProps): ConfirmProps {
   const { okButtonProps = {}, ...rest } = props;
   return {
     type: 'error' as const,
-    // TODO(PORTING): 移植时恢复原始图标
-    // icon: (
-    //   <IconErrorSmallIcon className="py-2 !text-20 text-s-color-system-alert" />
-    // ),
     icon: <IconCrossCircleStroked className="py-2 text-20 text-s-color-system-alert" />,
     okButtonProps: {
-      // TODO(PORTING): 移植时恢复 danger-primary 类型
-      // type: 'danger-primary',
       type: 'danger' as const,
       ...okButtonProps,
     },

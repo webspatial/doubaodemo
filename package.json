@@ -10,8 +10,8 @@
     "test:pwa": "node scripts/check-pwa-build.mjs"
   },
   "dependencies": {
-    "@douyinfe/semi-icons": "2.53.2",
-    "@douyinfe/semi-ui": "2.53.2",
+    "@douyinfe/semi-icons": "2.100.0",
+    "@douyinfe/semi-ui": "2.100.0",
     "@radix-ui/react-dropdown-menu": "^2.1.2",
     "@webspatial/core-sdk": "https://pkg.pr.new/@webspatial/core-sdk@41f791e",
     "@webspatial/react-sdk": "https://pkg.pr.new/@webspatial/react-sdk@41f791e",

@@ -20,6 +20,7 @@ import IconClose from '@douyinfe/semi-icons/lib/es/icons/IconClose';
 
 import { useLoading } from './use-loading';
 import { SamanthaModalProps } from './type';
+import { applySpatialModalProps } from './spatial-card';
 // TODO(PORTING): 移植时替换为 SamanthaButton
 // import { SamanthaButton } from '../samantha-button';
 const SamanthaButton = Button;
@@ -168,9 +169,8 @@ export const SamanthaModal: React.FC<SamanthaModalProps> = (props) => {
     );
   };
   const defaultProps = {
-    // TODO(PORTING): 移植时恢复 IconCloseIcon
-    // closeIcon: <IconCloseIcon className="text-s-color-text-tertiary" />,
     closeIcon: <IconClose />,
+    mask: false,
     bodyStyle: {
       color: 'var(--s-color-text-secondary)',
       font: 'var(--s-font-small)',
@@ -180,12 +180,15 @@ export const SamanthaModal: React.FC<SamanthaModalProps> = (props) => {
     footer: renderFooter(),
   };
 
+  const spatialModalProps = applySpatialModalProps(props);
+  const { bodyStyle } = props;
+
   const modalProps = {
     ...defaultProps,
-    ...props,
-    ...(props.bodyStyle
+    ...spatialModalProps,
+    ...(bodyStyle
       ? {
-          bodyStyle: Object.assign({}, defaultProps.bodyStyle, props.bodyStyle),
+          bodyStyle: Object.assign({}, defaultProps.bodyStyle, bodyStyle),
         }
       : {}),
   } as React.ComponentProps<typeof Modal>;
