@@ -127,6 +127,7 @@ function buildLocalSdkOverrides(sdkRoot: string): UserConfig {
   // Resolving it from react-dom's location works in any package manager because
   // react-dom always has scheduler as a sibling.
   const schedulerDir = resolveSchedulerDir(process.cwd())
+  const hostReactAliases = resolveHostReactAliases(process.cwd())
 
   return {
     define: versionDefines,
@@ -137,6 +138,7 @@ function buildLocalSdkOverrides(sdkRoot: string): UserConfig {
       preserveSymlinks: false,
       dedupe: ['react', 'react-dom'],
       alias: [
+        ...hostReactAliases,
         {
           find: /^@webspatial\/react-sdk\/internal\/facades-client$/,
           replacement: path.join(reactPath, 'src/internal/facades-client.ts'),
@@ -189,6 +191,31 @@ function buildLocalSdkOverrides(sdkRoot: string): UserConfig {
   }
 }
 
+function resolveHostReactAliases(appCwd: string): NonNullable<UserConfig['resolve']>['alias'] {
+  const appRequire = createRequire(path.join(appCwd, 'package.json'))
+  const entries = [
+    ['react', 'react'],
+    ['react/jsx-runtime', 'react/jsx-runtime'],
+    ['react/jsx-dev-runtime', 'react/jsx-dev-runtime'],
+    ['react-dom', 'react-dom'],
+    ['react-dom/client', 'react-dom/client'],
+    ['react-dom/server', 'react-dom/server'],
+  ] as const
+
+  return entries.flatMap(([specifier, packageEntry]) => {
+    try {
+      return [
+        {
+          find: new RegExp(`^${escapeRegExp(specifier)}$`),
+          replacement: appRequire.resolve(packageEntry),
+        },
+      ]
+    } catch {
+      return []
+    }
+  })
+}
+
 // Resolve scheduler relative to the host app's react-dom (where scheduler always lives
 // as a direct dep). Returns the package directory or null if it cannot be located,
 // in which case we silently skip the alias and let any caller-provided alias win.
@@ -202,6 +229,10 @@ function resolveSchedulerDir(appCwd: string): string | null {
   } catch {
     return null
   }
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
 function readPackageVersion(packageDir: string): string | null {

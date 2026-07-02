@@ -27,6 +27,28 @@ export const registerServiceWorker = () => {
     return;
   }
 
+  if (import.meta.env.DEV) {
+    window.addEventListener("load", () => {
+      void navigator.serviceWorker
+        .getRegistrations()
+        .then((registrations) =>
+          Promise.all(registrations.map((registration) => registration.unregister())),
+        )
+        .then(() => caches.keys())
+        .then((keys) =>
+          Promise.all(
+            keys
+              .filter((key) => key.startsWith("avatar-dropdown-demo-"))
+              .map((key) => caches.delete(key)),
+          ),
+        )
+        .catch((error) => {
+          console.warn("[doubaodemo] service worker cleanup failed", error);
+        });
+    });
+    return;
+  }
+
   window.addEventListener("load", () => {
     navigator.serviceWorker
       .register("/sw.js")
