@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Avatar Dropdown Demo</title>
+  <desc id="desc">App icon with a spatial dropdown motif.</desc>
+  <rect width="512" height="512" rx="112" fill="#101820"/>
+  <circle cx="168" cy="164" r="62" fill="#7dd3fc"/>
+  <path d="M92 346c16-72 56-108 120-108s104 36 120 108H92Z" fill="#e0f2fe"/>
+  <rect x="272" y="142" width="148" height="188" rx="24" fill="#ffffff"/>
+  <path d="M302 190h88M302 236h88M302 282h54" stroke="#101820" stroke-width="26" stroke-linecap="round"/>
+  <path d="m348 378 42-42 42 42" fill="none" stroke="#fbbf24" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

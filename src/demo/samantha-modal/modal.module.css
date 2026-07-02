@@ -1,0 +1,73 @@
+/* 
+  TODO(PORTING): 移植时替换为 modal.module.less
+  该文件对应 flow-web-monorepo 中的 modal.module.less
+  由于 demo 使用全局 CSS，这里用普通样式，核心类名保持一致
+*/
+
+.samantha-modal-root [role='dialog'] {
+  padding: 20px;
+  border-radius: var(--s-radius-s, 12px);
+  border: 0.5px solid var(--s-color-border-tertiary, #e5e6eb);
+  background: var(--s-color-bg-dialogs-container, #ffffff);
+}
+
+.samantha-modal-cancel {
+  background: var(--s-color-bg-float, #f7f8fa) !important;
+}
+
+.samantha-modal-cancel:hover {
+  background: var(--s-color-bg-trans, #f2f3f5) !important;
+}
+
+/* :global 等价样式 - 在 demo 中使用全局选择器 */
+.footer-fill .semi-button {
+  margin: 0;
+}
+
+.semi-modal-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.semi-modal {
+  margin: 0 auto;
+}
+
+.semi-modal-footer {
+  margin: 0;
+}
+
+.semi-modal-body-wrapper {
+  margin: 0;
+}
+
+.semi-modal-close {
+  color: var(--s-color-text-tertiary, #86909c);
+}
+
+.semi-modal-close:hover {
+  background: var(--s-color-bg-trans, #f2f3f5);
+  border-radius: var(--s-radius-xxs, 4px);
+}
+
+/* 更改尺寸定义 */
+.semi-modal-small {
+  width: 360px;
+}
+
+.semi-modal-medium {
+  width: 420px;
+}
+
+.semi-modal-large {
+  width: 600px;
+}
+
+.semi-modal-x-large {
+  width: 1020px;
+}
+
+/* 改变confirm-modal内容对齐方式 */
+.semi-modal-withIcon {
+  margin: 0;
+}

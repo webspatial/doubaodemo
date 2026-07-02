@@ -53,12 +53,7 @@ export function BaselineDemo({ onLog }: { onLog: LogFn }) {
                   data-name="baseline-menu-surface"
                   style={{ "--xr-back": 100 }}
                 >
-                  <div className="content-badge">
-                    Content asChild enable-xr surface
-                  </div>
-                  <DropdownMenu.Label className="menu-label">
-                    单 root
-                  </DropdownMenu.Label>
+                   
                   <DropdownMenu.Item
                     className="menu-item"
                     onSelect={(event) => {

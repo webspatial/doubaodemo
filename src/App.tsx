@@ -1,7 +1,9 @@
 import { useState } from "react";
 
+import { AboutModalFlowDemo } from "./demo/AboutModalFlowDemo";
 import { BaselineDemo } from "./demo/BaselineDemo";
 import { PluginHostMenuDemo } from "./demo/PluginHostMenuDemo";
+import { SamanthaModalDemo } from "./demo/SamanthaModalDemo";
 import { ShadowPortalDemo } from "./demo/ShadowPortalDemo";
 import { SurfaceConflictDemo } from "./demo/SurfaceConflictDemo";
 import { appendLog } from "./demo/utils";
@@ -24,7 +26,7 @@ export default function App() {
         </p>
       </header>
 
-      <div className="summary">
+      {/* <div className="summary">
         <div className="summary-item">
           <strong>enable-xr surface</strong>
           <span>Content asChild + div enable-xr，菜单作为独立空间 surface</span>
@@ -45,13 +47,15 @@ export default function App() {
           <strong>plugin host</strong>
           <span>模拟 wrapper.pico 的 list + portalMenuOption 机制</span>
         </div>
-      </div>
+      </div> */}
 
       <div className="demo-grid">
-        {/* <BaselineDemo onLog={log} />
-        <ShadowPortalDemo onLog={log} />
-        <SurfaceConflictDemo onLog={log} /> */}
-        <PluginHostMenuDemo onLog={log} />
+        <BaselineDemo onLog={log} />
+        <AboutModalFlowDemo onLog={log} />
+        <SamanthaModalDemo onLog={log} />
+        {/* <ShadowPortalDemo onLog={log} /> */}
+        {/* <SurfaceConflictDemo onLog={log} /> */}
+        {/* <PluginHostMenuDemo onLog={log} /> */}
       </div>
 
       <section className="log-panel">

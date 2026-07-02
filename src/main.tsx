@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { SpatialBoot } from '@webspatial/react-sdk';
 import App from './App';
+import { registerServiceWorker } from './registerServiceWorker';
 import './styles.css';
+
+registerServiceWorker();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
